@@ -11,6 +11,22 @@ function showNumber(number) {
         displayPrev.innerText += inputNumber.innerText;
     })
 }
+
+const multiButton = document.getElementById('multi-btn');
+multiButton.addEventListener('click',function(event){
+    event.innerText = '*';
+    const displayForMulti = document.getElementById('display-text');
+    displayForMulti.innerText += event.innerText;
+    
+})
+const divButton = document.getElementById('division-btn');
+divButton.addEventListener('click',function(event){
+    event.innerText = '/';
+    const displayForDiv = document.getElementById('display-text');
+    displayForDiv.innerText += event.innerText;
+    
+})
+
 const isEqual = document.getElementById('equal-btn');
 isEqual.addEventListener('click',function(){
     const currentDisplay = document.getElementById('display-text');
@@ -37,8 +53,6 @@ showNumber('number-8');
 showNumber('number-9');
 showNumber('plus-btn');
 showNumber('minus-btn');
-showNumber('division-btn');
-showNumber('multi-btn');
 showNumber('percent-btn');
 showNumber('dot-btn');
 
